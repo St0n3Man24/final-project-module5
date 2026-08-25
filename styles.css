@@ -137,6 +137,11 @@ header {
 
 /* MOVIES */
 
+#movies {
+  padding-top: 12px;
+  background-color: rgb(173, 230, 225);
+}
+
 .movies__header {
   display: flex;
   justify-content: space-between;
