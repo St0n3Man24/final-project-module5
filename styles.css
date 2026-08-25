@@ -18,12 +18,17 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font-weight: 600;
+}
+
 /* NAVIGATION */
 
 nav {
   display: flex;
   height: 130px;
   background-color: rgb(119, 252, 252);
+  padding: 24px;
 }
 
 .nav__container {
@@ -75,6 +80,7 @@ nav {
 header {
   display: flex;
   justify-content: center;
+  padding: 24px;
 }
 
 .header__container {
@@ -120,11 +126,116 @@ header {
 .header__search--btn {
   color: aqua;
   border: none;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 50px;
-  padding: 6px;
+  padding: 4px;
   z-index: 2;
-  margin: 12px 8px 12px 0; /*Top, Right, Bottom, Left*/
+  margin: 14px 6px 12px 0; /*Top, Right, Bottom, Left*/
   font-size: 20px;
   position: absolute;
+}
+
+/* MOVIES */
+
+.movies__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 80px;
+}
+
+.section__title {
+  font-size: 22px;
+}
+
+.movies__sort {
+  border: 2px solid aqua;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+#filter.movies__sort {
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+}
+
+.movies__loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  font-size: 60px;
+  opacity: 0;
+}
+
+.movies__loading--spinner {
+  display: none !important;
+}
+
+.movies__loading .movies__loading--spinner {
+  display: block !important;
+}
+
+.fa-spinner {
+  animation: rotate 800ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 25%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.movie__img--wrapper {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /*Shift-Right, Shift-Down, Spread */
+}
+
+.movie__img {
+  cursor: not-allowed;
+  object-fit: contain;
+  object-position: left;
+  width: 100%;
+}
+
+.movie__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.movie__title {
+  width: 100%;
+}
+
+.movie__rating {
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
