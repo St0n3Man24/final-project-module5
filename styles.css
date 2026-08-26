@@ -133,6 +133,7 @@ header {
   margin: 14px 6px 12px 0; /*Top, Right, Bottom, Left*/
   font-size: 20px;
   position: absolute;
+  cursor: pointer;
 }
 
 /* MOVIES */

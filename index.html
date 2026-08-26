@@ -1,152 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/d831fbd0b2.js" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d831fbd0b2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
 
-<body>
-  <section id="landing">
-    <nav>
-      <div class="nav__container">
-        <img class="logo" src="./assets/movie_logo.jpg" alt="">
-        <ul class="nav__links">
-          <li class="nav__link">
-            <a href="#" class="nav__link--anchor link__hover-effect">Home</a></li>
-          <li class="nav__link">
-            <a href="#" class="nav__link--anchor link__hover-effect">About</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header>
-      <div class="header__container">
-        <div class="header__description">
-          <h2>Browse For Your Favorite <span class="blue">Movies</span></h2>
+  <body>
+    <section id="landing">
+      <nav>
+        <div class="nav__container">
+          <img class="logo" src="./assets/movie_logo.jpg" alt="" />
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="#" class="nav__link--anchor link__hover-effect">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="#" class="nav__link--anchor link__hover-effect">About</a>
+            </li>
+          </ul>
         </div>
-        <div class="header__search">
-          <input type="text" class="header__search--input" placeholder="Search by Keyword" onchange="onSearchChange(event)">
-          <button class="header__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-      </div>
-    </header>
-  </section>
-
-  <main>
-    <section id="movies">
-      <div class="movie__container">
-        <div class="row movie__row">
-          <div class="movies__header">
-            <h3 class="section__title">Movie Results:</h3>
-            <select class="movies__sort" id="filter">
-              <option value="" disabled selected>Sort</option>
-              <option value="ALPHA_A_Z">Alphabetical A to Z</option>
-              <option value="ALPHA_Z_A">Alphabetical Z to A</option>
-              <option value="NEW_OLD">Newest to Oldest</option>
-              <option value="OLD_NEW">Oldest to Newest</option>
-            </select>
+      </nav>
+      <header>
+        <div class="header__container">
+          <div class="header__description">
+            <h2>Browse For Your Favorite <span class="blue">Movies</span></h2>
           </div>
-          <div class="movies movies__loading">
-            <i class="fas fa-spinner books__loading--spinner"></i>
-          </div>
-          <div class="movies">
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
-            <div class="movie">
-              <figure class="movie__img--wrapper">
-                <img class="movie__img" src="./assets/Guardians_Vol2.jpg" alt="">
-              </figure>
-              <div class="movie__description">
-                <h3 class="movie__title">Guardians of the Galaxy: Vol. 2</h3>
-                <h4 class="movie__year">2017</h4>
-              </div>
-            </div>
+          <div class="header__search">
+            <input
+              type="text"
+              class="header__search--input"
+              placeholder="Search by Keyword"
+              onchange="onSearchChange(event)"
+            />
+            <button class="header__search--btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </div>
-      </div>
+      </header>
     </section>
-  </main>
-</body>
+
+    <main>
+      <section id="movies">
+        <div class="movie__container">
+          <div class="row movie__row">
+            <div class="movies__header">
+              <h3 class="section__title">Movie Results:</h3>
+              <select class="movies__sort" id="filter" onchange="filterMovies(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="ALPHA_A_Z">Alphabetical A to Z</option>
+                <option value="ALPHA_Z_A">Alphabetical Z to A</option>
+                <option value="NEW_OLD">Newest to Oldest</option>
+                <option value="OLD_NEW">Oldest to Newest</option>
+              </select>
+            </div>
+            <div class="movies movies__loading">
+              <i class="fas fa-spinner movies__loading--spinner"></i>
+            </div>
+            <div class="movies">
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+              <div class="movie">
+                <figure class="movie__img--wrapper">
+                  <img
+                    class="movie__img"
+                    src=""
+                    alt=""
+                  />
+                </figure>
+                <div class="movie__description">
+                  <h3 class="movie__title"></h3>
+                  <h4 class="movie__year"></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
