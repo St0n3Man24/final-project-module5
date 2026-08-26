@@ -23,11 +23,11 @@ async function renderMovies(filter) {
   }
 
   const moviesHTML = movies.map((movie) => {
-    const poster = movie.Poster !== "N/A" ? movie.Poster : "./assets/movie_logo.jpg";
-    console.log(movie.Title, movie.Poster, poster);
+    // const poster = movie.Poster !== "N/A" ? movie.Poster : "./assets/movie_logo.jpg";
     return `<div class="movie">
       <figure class="movie__img--wrapper">
-        <img class="movie__img" src="${poster}" alt="${movie.Title} poster">
+        <img class="movie__img" src="${movie.Poster}" alt=""
+        onerror="this.onerror=null; this.src='./assets/movie_logo.jpg';">
       </figure>
       <div class="movie__description">
         <h3 class="movie__title">${movie.Title}</h3>
