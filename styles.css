@@ -20,6 +20,7 @@ body {
 
 h2 {
   font-weight: 500;
+  text-align: center;
 }
 
 h3 {
@@ -45,7 +46,6 @@ nav {
 }
 
 .nav__logo {
-  width: 100%;
   max-width: 200px;
   border-radius: 10px;
 }
@@ -83,6 +83,7 @@ nav {
 /* HEADER */
 
 header {
+  width: 100%;
   display: flex;
   justify-content: center;
   padding: 24px;
@@ -139,6 +140,15 @@ header {
   font-size: 20px;
   position: absolute;
   cursor: pointer;
+  transition: all 100ms ease;
+}
+
+.header__search--btn:hover {
+  color: rgb(0, 170, 170);
+}
+
+.header__search--btn:active {
+  transform: scale(0.8);
 }
 
 /* MOVIES */
@@ -154,8 +164,8 @@ header {
 
 .movies__container {
   min-height: 1200px;
+  max-width: 1280px;
   width: 100%;
-  max-width: 1400px;
   padding: 0 48px;
 }
 
@@ -264,6 +274,10 @@ header {
 
 /* FOOTER */
 
+footer {
+  width: 100%;
+}
+
 .footer__container {
   background-color: black;
   padding: 24px 0;
@@ -334,7 +348,7 @@ header {
 }
 
 .footer__copyright {
-  color:aqua;
+  color: aqua;
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 12px;
@@ -342,14 +356,67 @@ header {
 
 /* SCREEN RESPONSIVENESS */
 
+
 @media (max-width: 768px) {
   .nav__logo {
     width: 175px;
+  }
+  .movie__title {
+    font-size: 16px;
+  }
+  .movie__year {
+    font-size: 16px;
+  }
+  .movies__container {
+    min-height: 100px;
   }
 }
 
 @media (max-width: 640px) {
   .nav__logo {
     width: 150px;
+  }
+  .nav__link--anchor {
+    font-size: 16px;
+  }
+  .movies__header {
+    flex-direction: column;
+  }
+  .section__title {
+    font-size: 16px;
+  }
+  .header__container {
+    max-width: 250px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .header__search--input {
+    transform: scale(0.8);
+  }
+  .header__search--btn {
+    transform: scale(0.8);
+    right: 20px;
+  }
+  .movie__title {
+    font-size: 12px;
+  }
+  .movie__year {
+    font-size: 12px;
+  }
+  .movies__sort {
+    transform: scale(0.8);
+  }
+  .movies__container {
+    min-height: 800px;
+  }
+  .footer__logo--img {
+    transform: scale(0.8);
+  }
+  .footer__link {
+    font-size: 16px;
+  }
+  .footer__copyright {
+    font-size: 10px;
   }
 }
