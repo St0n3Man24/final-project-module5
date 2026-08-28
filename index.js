@@ -9,6 +9,8 @@ async function renderMovies(filter) {
   moviesWrapper.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`;
   moviesWrapper.classList.add("movies__loading");
 
+  await new Promise(resolve => setTimeout(resolve, 800));
+
   movies = await getMovies(searchKeyword);
   moviesWrapper.classList.remove("movies__loading");
 

@@ -296,13 +296,6 @@ footer {
   align-items: center;
 }
 
-.footer__logo--anchor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: auto;
-}
-
 .footer__logo {
   margin: 12px;
   width: 100%;
@@ -356,7 +349,6 @@ footer {
 
 /* SCREEN RESPONSIVENESS */
 
-
 @media (max-width: 768px) {
   .nav__logo {
     width: 175px;
@@ -368,7 +360,7 @@ footer {
     font-size: 16px;
   }
   .movies__container {
-    min-height: 100px;
+    min-height: 800px;
   }
 }
 
