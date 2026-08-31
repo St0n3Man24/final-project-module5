@@ -8,10 +8,11 @@ async function renderMovies(filter) {
   const moviesWrapper = document.querySelector(".movies");
   moviesWrapper.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`;
   moviesWrapper.classList.add("movies__loading");
+  
+  movies = await getMovies(searchKeyword);
 
   await new Promise(resolve => setTimeout(resolve, 800));
 
-  movies = await getMovies(searchKeyword);
   moviesWrapper.classList.remove("movies__loading");
 
   if (filter === "ALPHA_A_Z") {
